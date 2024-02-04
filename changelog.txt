@@ -1,0 +1,78 @@
+Changelog:
+        v3.6  : May 31th, 2021
+        -----
+                - Support for string constants
+                - Option to assign a string value to a symbol from the
+                command line
+        
+        v3.5  : May 26th, 2021
+        -----
+                - Option to assign an integet value to a symbol from the
+                command line
+        
+        v3.4  : Nov 8th, 2020
+        -----
+                - Predefined NES specific constants: PPU/APU registers
+     
+        v3.3  : Nov 1th, 2020
+        -----
+                - Output to stdout support (use '-' as output filename)
+                - All messages redirected to stderr instead of stdout now
+                - NES 2.0 support with very large files support, mappers up
+                  to 4095, submappers, etc.
+                - New directives for NES 2.0 header: .INESSUBMAP, .INESPRGRAM,
+                  .INESPRGNVRAM, .INESCHRRAM, .INESCHRNVRAM, .INESBAT, .INESTIM
+                - .INESPRG and .INESCHR can be used with actual size now, not
+                  only number of banks, e.g. .INESPRG 8 and .INESPRG $20000
+                  means the same now
+
+        v3.0  : Aug 30th, 2018
+        -----
+                - Bugfixes
+
+        v2.51 : September 9th, 2000
+        -----
+                Assembler core :
+                - added support for a new file format to the INCBIN directive,
+                  INCBIN can now include '.fmp' map files created with the
+                  mapper program Mappy.
+
+        v2.50 : July 27th, 2000
+        -----
+                Assembler core :
+                - fixed a few bugs here and there.
+                - added a new predefined function SIZEOF that returns
+                  the size of a data element (ex. included with #INCBIN)
+                - added four experimental directives .proc/.endp,
+                  and .procgroup/.endprocgroup; don't use them yet.
+
+        v2.10 : January 22th, 1999
+        -----
+                Assembler core:
+                - fixed a bug in backward branch code.
+                - fixed a little bug in the expression parser.
+                - merged the code of the NES and the PCE assembler, now
+                  there's only one program.
+                - made the code more portable; it can now be compiled
+                  without any change on most Unix systems.
+                - added '.byte' and '.word' directives (same as '.db' and
+                  '.dw') for compatibility with other assemblers.
+                - added a new command line switch, '-srec' to ouput a
+                  Motorola S-record file (for EEPROM/EPROM programming).
+
+        v2.01 : December 21th, 1998
+        -----
+                - minor update, fixed a litte bug in the bank code.
+
+        v2.00 : December 19th, 1998
+        -----
+                - merged Charles Doty's NES assembler in MagicKit, which add
+                  NES support to MagicKit. :)
+                - added a version of .defchr and .incchr directives adapted
+                  to the NES.
+
+        v0.10 : May 4th, 1998
+        -----
+                - removed all the HuC6820 opcodes.
+                - added four directives to support the INES file format
+                  (inesprg, ineschr, inesmap, inesmir).
